@@ -99,7 +99,7 @@ end)
 
 c:Button("Safe Farm Place",function()
 game:GetService("Workspace").Map["Le Check"].Script.Disabled = true
-wait(1)
+wait(0.1)
 game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-24.6577396, 50001.8945, 48.8838539, 0.999390423, 5.9500902e-09, 0.0349089019, -5.04443021e-09, 1, -2.60318185e-08, -0.0349089019, 2.58398689e-08, 0.999390423)
 end)
 
