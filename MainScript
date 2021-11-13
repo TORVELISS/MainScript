@@ -88,9 +88,13 @@ c:Button("Curse Mark Spinner",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-25.2274666, -100.369972, -238.771774, -0.0610595383, -5.69518122e-08, 0.998133779, 2.07818989e-08, 1, 5.83296078e-08, -0.998133779, 2.43046916e-08, -0.0610595383)
 end)
 
-c:Button("Logs",function()
+c:Button("Logs 1",function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-2746.34033, -100.400185, 5582.01221, 0.000106020831, 1.45732111e-08, 0.999999821, 3.73918425e-08, 1, -1.45771777e-08, -0.999999821, 3.73933773e-08, 0.000106020831)
 
+end)
+
+c:Button("Logs 2",function()
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-2746.34033, -100.400185, 5404.01221, 0.000106020831, 1.45732111e-08, 0.999999821, 3.73918425e-08, 1, -1.45771777e-08, -0.999999821, 3.73933773e-08, 0.000106020831)
 end)
 
 d:Button("Fly",function()
