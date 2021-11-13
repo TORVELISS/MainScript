@@ -1,0 +1,144 @@
+_G.AutoCharge = false;
+_G.AutoMove = false;
+
+
+
+
+local library = loadstring(game:HttpGet(('https://raw.githubusercontent.com/AikaV3rm/UiLib/master/Lib.lua')))()
+
+local w = library:CreateWindow("Shinobi Final Legacy") -- Creates the window
+
+local b = w:CreateFolder("Farming") -- Creates the folder(U will put here your buttons,etc)
+
+local c = w:CreateFolder("Teleports")
+
+local d = w:CreateFolder("Player")
+
+local e = w:CreateFolder("Credits")
+
+local f = w:CreateFolder("Settings")
+
+b:Toggle("Auto range moves",function(bool)
+    _G.AutoMove = bool
+    if bool then
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/TORVELISS/AutoCharge/main/AutoMoves")))()
+    end
+end)
+
+b:Toggle("Auto Charge",function(bool)
+    _G.AutoCharge = bool
+        if bool then
+            _G.AutoCharge = true;
+
+            spawn(function()
+            while _G.AutoCharge == true do
+            wait(0.3)
+            if game:GetService("Players").LocalPlayer.Chakra.Value < 501 then
+            local A_1 = "Charging"
+            local A_2 = true
+            local Event = game:GetService("ReplicatedStorage").Remotes.Control
+            Event:FireServer(A_1, A_2)
+            -- here
+            end
+            if game:GetService("Players").LocalPlayer.Chakra.Value > 1299 then
+            local A_1 = "Charging"
+            local A_2 = false
+            local Event = game:GetService("ReplicatedStorage").Remotes.Control
+            Event:FireServer(A_1, A_2)
+            end
+            end
+            end)        
+
+    end      
+end)
+
+c:Button("Log quest NPC",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-2646.36914, -100.400185, 5438.78711, 0.613253832, -3.44449944e-08, -0.789886057, 3.73918354e-08, 1, -1.4577175e-08, 0.789886057, -2.05957758e-08, 0.613253832)
+end)
+
+c:Button("Survival NPC",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-3063.26001, -71.3997726, -1329.70996, 0.816763639, 0, 0.576972365, 0, 1, 0, -0.576972365, 0, 0.816763639)
+end)
+
+c:Button("Kurama Boss",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-2289.60034, -100.273239, 827.576477, -0.83517766, 0.0342234485, -0.548914373, -6.96629286e-06, 0.998061359, 0.0622372515, 0.549980223, 0.0519829877, -0.833558321)
+end)
+
+c:Button("Shukaku Boss",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-13608.6309, -100.39949, -1818.09192, 0.861720741, 0.0430955328, 0.505549312, -2.16629516e-07, 0.996386349, -0.0849365517, -0.50738287, 0.0731914788, 0.858606815)
+end)
+
+c:Button("Shop NPC",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-7320.57227, -100.399918, 4315.11719, -0.719175637, 2.00423393e-08, 0.694828153, 1.61118408e-08, 1, -1.21686057e-08, -0.694828153, 2.44359533e-09, -0.719175637)
+end)
+
+c:Button("Special Shop NPC",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new ()
+end)
+
+c:Button("Seal Room",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-19807, 19978.3008, -19904.1992, 0.748925269, 0, 0.662654519, 0, 1, 0, -0.662654519, 0, 0.748925269)
+end)
+
+c:Button("Madara NPC",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (850.118, -50.283, -2323.23)
+end)
+
+c:Button("Curse Mark Spinner",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-25.2274666, -100.369972, -238.771774, -0.0610595383, -5.69518122e-08, 0.998133779, 2.07818989e-08, 1, 5.83296078e-08, -0.998133779, 2.43046916e-08, -0.0610595383)
+end)
+
+c:Button("Logs",function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new (-2746.34033, -100.400185, 5582.01221, 0.000106020831, 1.45732111e-08, 0.999999821, 3.73918425e-08, 1, -1.45771777e-08, -0.999999821, 3.73933773e-08, 0.000106020831)
+
+end)
+
+d:Button("Fly",function()
+    loadstring(game:HttpGet(('https://raw.githubusercontent.com/TORVELISS/Flysciprts/main/flyscript'),true))()
+end)
+
+
+d:Button("NoClip (Not working)",function()
+
+
+
+end)
+
+
+d:Slider("Speed Boost",{
+    min = 16; -- min value of the slider
+    max = 300; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    game.Players.LocalPlayer.SpeedBoost.Value = value
+end)
+
+d:Slider("Jump Boost",{
+    min = 50; -- min value of the slider
+    max = 1000; -- max value of the slider
+    precise = true; -- max 2 decimals
+},function(value)
+    game.Players.LocalPlayer.JumpBoost.Value = value
+end)
+
+e:Button("Naenaed#1692",function()
+
+end)
+
+e:Button("TORVELIS#5318",function()
+    
+end)
+
+e:Button("Discord Server",function()
+    
+end)
+
+f:ColorPicker("ColorPicker",Color3.fromRGB(255,0,0),function(color) --Default color
+    print(color)
+end)
+
+f:Box("Box","number",function(value) -- "number" or "string"
+    print(value)
+end)
+
+f:DestroyGui()
